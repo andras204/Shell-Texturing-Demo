@@ -1,0 +1,18 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://45p3eqoaenpo"]
+
+[ext_resource type="Shader" path="res://shell_demo_scenes/vertex_extrude/vert_ext.gdshader" id="1_qibwy"]
+
+[resource]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_qibwy")
+shader_parameter/shell_index = 1
+shader_parameter/shell_count = 2
+shader_parameter/shell_spacing = 0.01
+shader_parameter/shell_spacing_attenuation = 1.0
+shader_parameter/density = 512.0
+shader_parameter/noise_min = 0.0
+shader_parameter/noise_max = 1.0
+shader_parameter/stiffness = 2.0
+shader_parameter/displace_attenuation = 2.0
+shader_parameter/displace_dir = Vector3(0, -1, 0)

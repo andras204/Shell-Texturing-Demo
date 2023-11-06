@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dljq7m57n64rn"]
+
+[ext_resource type="Script" path="res://shell_demo_scenes/vertex_extrude/demo.gd" id="1_rpnyu"]
+
+[node name="demo" type="Node3D"]
+script = ExtResource("1_rpnyu")
+shell_count = 256
+shell_spacing = 0.001
+density = 256
+stiffness = 5.0
+displace_dir = Vector3(4.5, 0, 0)
+wind_strength = 4.5

@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqxqepef34yh0"]
+
+[ext_resource type="Material" uid="uid://c7r2foqrodiw8" path="res://shell_demo_scenes/fog/shell_instance/fog.tres" id="1_kwqeb"]
+[ext_resource type="Script" path="res://shell_demo_scenes/fog/shell_instance/fog_shell_instance.gd" id="2_is4it"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_b6x0e"]
+resource_local_to_scene = true
+material = ExtResource("1_kwqeb")
+
+[node name="ShellInstance" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_b6x0e")
+script = ExtResource("2_is4it")
+height = 0.649

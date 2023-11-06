@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8m1fyc6fx27y"]
+
+[ext_resource type="Material" uid="uid://c44oa1sgwaj86" path="res://shell_demo_scenes/pine_forest/pine_forest.tres" id="1_keh8x"]
+[ext_resource type="Script" path="res://shell_demo_scenes/pine_forest/shell.gd" id="2_fdmwy"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7co43"]
+resource_local_to_scene = true
+material = ExtResource("1_keh8x")
+
+[node name="shell" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_7co43")
+script = ExtResource("2_fdmwy")
+density = 64

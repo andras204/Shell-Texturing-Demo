@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://00iip7tfieh7"]
+
+[ext_resource type="Shader" path="res://shell_demo_scenes/blue_plants/blue_plants.gdshader" id="1_t2ryw"]
+
+[resource]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_t2ryw")
+shader_parameter/albedo = Color(0.137255, 0.282353, 0.537255, 1)
+shader_parameter/fade = Color(0.666667, 0.282353, 0.509804, 1)
+shader_parameter/height = 0.5
+shader_parameter/density = 64
+shader_parameter/shell_index = 1
+shader_parameter/seed = 0

@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://hikamuje8jhp"]
+
+[ext_resource type="Shader" path="res://shell_demo_scenes/grass/shell_instance/grass.gdshader" id="1_fyxx3"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_k3qav"]
+noise_type = 2
+frequency = 0.7208
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_dkn0q"]
+width = 128
+height = 128
+seamless = true
+noise = SubResource("FastNoiseLite_k3qav")
+
+[resource]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_fyxx3")
+shader_parameter/albedo = Color(0, 0.619608, 0, 1)
+shader_parameter/height = 0.0
+shader_parameter/texture_albedo = SubResource("NoiseTexture2D_dkn0q")

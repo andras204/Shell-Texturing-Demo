@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c44oa1sgwaj86"]
+
+[ext_resource type="Shader" path="res://shell_demo_scenes/pine_forest/pine_forest.gdshader" id="1_t22x6"]
+
+[resource]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_t22x6")
+shader_parameter/albedo = null
+shader_parameter/height = 0.5
+shader_parameter/density = 32
+shader_parameter/shell_index = 1
+shader_parameter/seed = 0

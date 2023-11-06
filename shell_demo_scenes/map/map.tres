@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://b61orddwjei71"]
+
+[ext_resource type="Shader" path="res://shell_demo_scenes/map/map.gdshader" id="1_b40kf"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_0v378"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_cjmwq"]
+noise = SubResource("FastNoiseLite_0v378")
+
+[resource]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_b40kf")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/height = 1.0
+shader_parameter/texture_albedo = SubResource("NoiseTexture2D_cjmwq")

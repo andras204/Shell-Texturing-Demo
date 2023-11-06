@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://lhwaafgnbty8"]
+
+[ext_resource type="Script" path="res://shell_demo_scenes/pine_forest/demo.gd" id="1_3sdsh"]
+
+[node name="demo" type="Node3D"]
+script = ExtResource("1_3sdsh")
+shells = 128
+shell_spacing = 0.002

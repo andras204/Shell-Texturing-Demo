@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://y5doxex32ghc"]
+
+[ext_resource type="Script" path="res://shell_demo_scenes/grass/grass_demo.gd" id="1_xwqa5"]
+[ext_resource type="Script" path="res://main/camera.gd" id="2_k0rmg"]
+
+[node name="GrassDemo" type="Node3D"]
+script = ExtResource("1_xwqa5")
+shells = 256
+shell_spacing = 0.001
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.994557, 0.0143071, -0.103212, 0.104199, -0.136559, 0.985137, 0, -0.990529, -0.137306, 0, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1, 0)
+fov = 15.0
+size = 2.0
+script = ExtResource("2_k0rmg")
+max_zoom_out = 10.0
