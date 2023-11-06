@@ -4,7 +4,10 @@ signal blue_plants
 signal pine_forest
 signal vert_ext
 
+var version = "v0.1.01"
+
 func _ready():
+	%topbar_label.text = "Default scene // " + version
 	%scenes_button.connect("button_up", toggle_scene_list)
 #	%properties_button.connect("button_up", _send_properties_clicked)
 	%perf_button.connect("button_up", toggle_perf_readout)
@@ -38,12 +41,15 @@ func update_perf_readouts(delta: float):
 
 
 func _emit_blue_plants():
+	%topbar_label.text = "Blue plants // " + version
 	emit_signal("blue_plants")
 
 
 func _emit_pine_forest():
+	%topbar_label.text = "Pine Forest // " + version
 	emit_signal("pine_forest")
 
 
 func _emit_vert_ext():
+	%topbar_label.text = "Furball // " + version
 	emit_signal("vert_ext")
