@@ -4,5 +4,5 @@
 
 [node name="demo" type="Node3D"]
 script = ExtResource("1_3sdsh")
-shells = 128
-shell_spacing = 0.002
+shell_count = 128
+shell_spacing = 0.0015

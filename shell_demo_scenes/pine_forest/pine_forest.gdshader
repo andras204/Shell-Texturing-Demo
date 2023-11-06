@@ -1,11 +1,21 @@
 shader_type spatial;
 render_mode blend_mix,depth_prepass_alpha,cull_disabled,diffuse_lambert_wrap,specular_disabled;
 
+group_uniforms color;
 uniform vec4 albedo : source_color;
-uniform float height : hint_range(0.0, 1.0, 0.001) = 0.0;
-uniform int density = 64;
-uniform int shell_index = 0;
-uniform uint seed = 0;
+
+group_uniforms shell_positioning;
+uniform int shell_index = 1;
+uniform int shell_count = 2;
+uniform float shell_spacing = 0.01;
+uniform float shell_spacing_attenuation = 1.0;
+
+group_uniforms shell_texture;
+uniform float density = 32.0;
+uniform float noise_min = 0.0;
+uniform float noise_max = 1.0;
+
+varying float height;
 
 // hash function by FabriceNeyret2
 // https://www.shadertoy.com/view/WttXWX
@@ -32,6 +42,16 @@ float hash(uint x)
     x ^= x >> 14U;
     return float(x) / float(0xffffffffU);
 }
+
+
+void vertex() {
+	// TODO: shell attenuation
+	height = float(shell_index) / float(shell_count);
+	
+	// extrude shell
+	VERTEX.xyz += NORMAL.xyz * shell_spacing * float(shell_index);
+}
+
 
 void fragment() {
 	vec2 sway_uv = UV * float(density);

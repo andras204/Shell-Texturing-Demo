@@ -14,5 +14,6 @@ shader_parameter/density = 512.0
 shader_parameter/noise_min = 0.0
 shader_parameter/noise_max = 1.0
 shader_parameter/stiffness = 2.0
-shader_parameter/displace_attenuation = 2.0
+shader_parameter/stiffness_attenuation = 2.0
+shader_parameter/gravity_dir = Vector3(0, -1, 0)
 shader_parameter/displace_dir = Vector3(0, -1, 0)
